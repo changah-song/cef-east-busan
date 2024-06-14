@@ -5,7 +5,15 @@ add_to_menu: true
 description: "Meta description for about page"
 keywords: "responsive,jekyll,minimal template"
 ---
-
+<!-- Start Map Area -->
+<div class="map-area bg-color1">
+   <div class="map-wrapper section-spacing pb-0">
+      <div class="container">
+         <div id="map" style="width:100%;height:400px;"></div>
+      </div>
+   </div>
+ </div>
+ <!-- End Map Area -->
 <!-- Start Feature  Area -->
 <div class="feature-area bg-color1">
   <div class="feature-wrapper section-spacing pb-0">
@@ -49,3 +57,15 @@ keywords: "responsive,jekyll,minimal template"
   </div>
 </div>
 <!-- End Feature Area -->
+ 
+<!-- Naver Maps API Script -->
+<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=wk63z91ce7&callback=initMap" async defer></script>
+<script type="text/javascript">
+   function initMap() {
+      var mapOptions = {
+            center: new naver.maps.LatLng(37.3595704, 127.105399),
+            zoom: 10
+      };
+      var map = new naver.maps.Map('map', mapOptions);
+   }
+</script>
